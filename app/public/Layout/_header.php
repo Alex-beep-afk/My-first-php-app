@@ -12,5 +12,10 @@
             <a href="#"class ="navbar-item">Blog</a>
         </li>
     </ul>
+    <ul class="navbar-buttons">
+        <li class ="navbar-items">
+            <a href="/login.php" class="btn btn-secondary">Login</a>
+        </li>
+    </ul>
     </nav>
 </header>
