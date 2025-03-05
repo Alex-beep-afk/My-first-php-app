@@ -88,7 +88,14 @@ body {
 .btn-secondary:hover {
     background: #5a6268;
 }
+.btn.btn-danger{
+    background-color: var(--danger);
+    color: var(--light)
+}
+.btn.btn-danger:hover{
+    background-color: #dc3545 ;
 
+}
 /************************************** ALERT **************************************/
 .alert {
     border-radius: var(--border-radius);
