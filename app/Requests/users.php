@@ -18,6 +18,24 @@ return $db
 ->fetchAll();
 }
 /**
+ * Summary of findOneUserById
+ * @param int $id
+ * @return bool|array
+ */
+function findOneUserById(int $id):bool|array{
+    
+    global $db;
+
+    $query = "SELECT * FROM users WHERE id = :id";
+    $sql = $db->prepare($query);
+    $sql -> execute([
+        'id' => $id,
+    ]);
+    return $sql -> fetch();
+
+
+}
+/**
  * Récuperer un utilisateur en BDD en filtrant par son email
  * @param string $email Email de l'utilisateur à rechercher
  * @return bool|array
@@ -36,6 +54,7 @@ function findOneUserByEmail(string $email):bool|array{
     return $sql->fetch();
 
 }
+
 function createUser(string $firstName, string $lastName, string $email, string $password):bool{
     global $db;
     try{

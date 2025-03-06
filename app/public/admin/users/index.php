@@ -1,17 +1,8 @@
 <?php session_start(); 
 // Utilisation de la session 
 // Verifier si l'utilisateur n'est pas admin on redirige
-
-if(empty($_SESSION['user'])
-|| !in_array('ROLE_ADMIN', $_SESSION['user']['roles'])) 
-{
-    // On définit un message d'erreur
-    $_SESSION['messages']['danger'] = "Vous n'avez pas le droit d'accéder à cette page";
-
-    // On redirige vers la page de login
-    header("Location: /login.php");
-    exit(302);
-}
+require_once '/app/Utils/utils.php';
+checkAdmin(); 
 ?>
 <?php require_once '/app/Requests/users.php'; ?>
 
@@ -51,7 +42,7 @@ if(empty($_SESSION['user'])
                         <td><?= $user['roles']; ?></td>
                         <td>
                             <div class = "table-btn">
-                            <a href="#" class="btn btn-secondary">Modifier</a>
+                            <a href="/admin/users/update.php?id=<?= $user['id']; ?>" class="btn btn-secondary">Modifier</a>
                             <a href="#" class="btn btn-danger">Supprimer</a>
                             </div>
                             
