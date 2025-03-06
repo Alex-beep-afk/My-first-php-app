@@ -75,6 +75,7 @@ body {
 .btn-primary {
     background: var(--primary);
     color: var(--light);
+    background-color: #004fa3;
 }
 
 .btn-primary:hover {
