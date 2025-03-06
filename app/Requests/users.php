@@ -36,4 +36,43 @@ function findOneUserByEmail(string $email):bool|array{
     return $sql->fetch();
 
 }
+function createUser(string $firstName, string $lastName, string $email, string $password):bool{
+    global $db;
+    try{
+        $query = "INSERT INTO users( first_name, last_name, email, password ) VALUES (:firstName, :lastName, :email , :password)";
+        $sql = $db->prepare("$query");
+        $sql->execute([
+        'firstName' => $firstName,
+        'lastName'=> $lastName,
+        'email'=> $email,
+        'password'=> password_hash($password,PASSWORD_ARGON2I),
+    ]);
+    } catch(PDOException $e){
+        return false;
+    }
+
+    return true;
+    
+
+}
+function removeUser($id):bool{
+    global $db;
+    try{
+        $query = "DELETE FROM users WHERE id = :id";
+        $sql = $db->prepare("$query");
+        $sql->execute([
+            'id' => $id,
+        ]);
+        return true;
+
+    }catch(PDOException $e){
+        return false;
+
+
+    }
+    
+}
+    
+         
+         
 ?>

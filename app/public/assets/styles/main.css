@@ -88,11 +88,11 @@ body {
 .btn-secondary:hover {
     background: #5a6268;
 }
-.btn.btn-danger{
-    background-color: var(--danger);
+.btn-danger{
+    background: var(--danger);
     color: var(--light)
 }
-.btn.btn-danger:hover{
+.btn-danger:hover{
     background-color: #dc3545 ;
 
 }

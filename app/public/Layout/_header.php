@@ -13,13 +13,18 @@
         </li>
     </ul>
     <ul class="navbar-buttons">
-        <li class ="navbar-items">
+        
         <?php if (!empty($_SESSION['user'])): ?>
+            <li class ="navbar-items">
             <a href="/logout.php" class="btn btn-danger">Logout</a>
+            <a href ="/sup.php">Supprimer mon compte</a>
+            </li>
             <?php else: ?>
-            <a href="/login.php" class="btn btn-danger">Login</a>
+            <li class ="navbar-items">
+            <a href="/login.php" class="btn btn-secondary">Login</a>
+            <a href="/register.php" class="btn btn-primary">Register</a>
+            </li>
             <?php endif; ?>
-        </li>
     </ul>
     </nav>
 </header>
