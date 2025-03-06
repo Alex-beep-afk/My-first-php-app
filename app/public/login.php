@@ -24,7 +24,7 @@ if (
             'firstName'=> $user['first_name'],
             'lastName'=> $user['last_name'],
             'email'=> $user['email'],
-            'roles'=> json_decode($user['roles'] ?? '')
+            'roles'=> json_decode($user['roles'] ?? '[]')
             // Ternaire si l'objet json que je veux decoder est null ?? alors je veux lui passer une chaine de caractere vide
         ];
         header('Location: /');
