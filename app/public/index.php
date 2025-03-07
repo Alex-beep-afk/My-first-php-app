@@ -17,15 +17,18 @@ session_start();
     <?php require_once '/app/public/Layout/_header.php'; ?>
     <main>
         <?php require_once '/app/public/Layout/_messages.php'; ?>
-        <form action="/contact.php" method ="POST">
-            <label for="name">Votre nom</label>
-            <input type ="text" name="name" id="name">
-            <label for="email">Votre email</label>
-            <input type ="email" name="email" id="email">
-            <label for="message">Votre message</label>
-            <textarea name="message" id="message"></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
+        <section class="card mt-4">
+            <form action="/contact.php" method="POST">
+                <label for="name">Votre nom</label>
+                <input type="text" name="name" id="name">
+                <label for="email">Votre email</label>
+                <input type="email" name="email" id="email">
+                <label for="message">Votre message</label>
+                <textarea name="message" id="message"></textarea>
+                <button class="btn" type="submit">Envoyer</button>
+            </form>
+        </section>
+
     </main>
 </body>
 

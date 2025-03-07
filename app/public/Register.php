@@ -17,8 +17,9 @@ if(
     
     if(!$userExist) {
         if(createUser($firstname, $lastname, $email, $password)){
-            $_SESSION['messages']['success'] = "Votre compte a bien été crée";
+            
             header('Location: /login.php');
+            $_SESSION['messages']['success'] = "Votre compte a bien été crée";
             exit(302);
         }
         else{

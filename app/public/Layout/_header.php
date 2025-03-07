@@ -22,9 +22,6 @@
             <?php endif; ?>
             <li class ="navbar-items">
             <a href="/logout.php" class="btn btn-danger">Logout</a></li>
-            <li class ="navbar-items">
-            <a href ="/sup.php"class="btn btn-danger">Supprimer mon compte</a>
-            </li>
             <?php else: ?>
             <li class ="navbar-items">
             <a href="/login.php" class="btn btn-secondary">Login</a>
