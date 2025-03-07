@@ -18,6 +18,8 @@
             <?php if (in_array('ROLE_ADMIN', $_SESSION['user']['roles'])): ?>
                 <li class="navbar-items">
                     <a href="/admin/users" class="btn btn-light">Admin User</a>
+                    <a href="/admin/articles/index.php" class="btn btn-light">Articles</a>
+                    <a href="/admin/articles/create.php" class="btn btn-light">Creer article</a>
                 </li>
             <?php endif; ?>
             <li class ="navbar-items">

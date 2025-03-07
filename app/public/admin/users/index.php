@@ -1,7 +1,8 @@
 <?php session_start(); 
     // Utilisation de la session 
     // Verifier si l'utilisateur n'est pas admin on redirige
-    require_once '/app/Utils/utils.php' ; checkAdmin(); ?>
+    require_once '/app/Utils/utils.php' ; 
+    checkAdmin(); ?>
     <?php require_once '/app/Requests/users.php'; ?>
 
     <!DOCTYPE html>
